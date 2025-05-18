@@ -1,0 +1,2 @@
+scenario,network_structure,arm_restricted,num_agents_restricted,prior_ps[0],prior_ps[1],p_increment[0],p_increment[1],max_ps[0],max_ps[1],avg_final_ps[0],avg_final_ps[1],num_agents,n_steps,n_success,n_runs,avg_time_to_converge
+baseline,complete,N/A,N/A,0.5,0.5,0.01,0.01,0.8,0.95,0.6594699999999953,0.7460700000000011,9,100,515,1000,0.92

@@ -1,0 +1,2 @@
+network_structure,grid_size,sigma,num_agents,agent_range,num_timesteps,num_simulations,success_proportion,avg_time_to_peak,avg_max_visits,avg_visits,one+_visit,two+_visits,three+_visits,four+_visits,five+_visits,six+_visits,seven+_visits,eight+_visits,nine+_visits,ten+_visits
+complete,101,1,10,5,200,200,0.43,89.04651162790698,3.695,0.15026958141358687,1467.82,56.615,6.575,1.35,0.34,0.12,0.06,0.015,0.005,0.0

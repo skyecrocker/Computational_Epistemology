@@ -4,7 +4,7 @@
 
 Contains the core logic of the network, agents, etc... used in bandit simulations
 
-### old_code_NoLongerInUSe
+### old_code_NoLongerInUse
 
 Used to generate some of the data in the past, so keeping it just in case. But everything has now been streamlined into a few generalized scripts.
 
@@ -26,5 +26,4 @@ Simulations that keep track of and record individuals throughout the simulation.
 
 ## Not Included
 
-Not included in this repo are the output csv files and reference code. 
-
+Not included in this repo are the output csv files and reference code.

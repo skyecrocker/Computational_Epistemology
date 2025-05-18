@@ -1,0 +1,34 @@
+Let's say we have 10 agents, as before. They are initially randomly distributed over the landscape. Their range is the number of steps 
+they can take in one timestep. They never revisit locations that are known to have been visited at an earlier timestep. In other words,
+ they only visit locations with an unknown value. Their strategy is simple: At each timestep, move to a location neighboring the (or a, 
+ in case of ties) current maximum, i.e., the location that has the highest value observed so far. If the current maximum doesn't have 
+ an unvisited neighbor, randomly move to some other location.
+
+We compare two types of setups:
+In setup 1, agents see other agents' movements and results. They will thus move to states neighboring maxima discovered by others, if 
+they are in range.
+In setup 2, agents cannot see (or ignore) other agents' movements and results. They will thus only pursue the above strategy based on 
+their own results.
+
+As a variant, we could also try implementing a version of epsilon-greediness: At each timestep: a) with probability 0.9, do as described 
+above; b) with probability 0.1, move to a random location within range.
+
+I was thinking about the dimensionality. I now think we should start with the 2D landscape. This is in line with what everyone else has 
+done, and it is easiest to visualize. I was also worried that in higher dimensions, climbing a single hill would take too much time.
+This does raise the redundancy worry: It might happen that at a given timestep, multiple agents visit the same location. (How bad this 
+is depends on the agents' range—see below.) I suggest we keep track of how much redundancy there is. We should also use an alternative 
+setup following your suggestion that agents don't always go to a location directly neighboring a maximum. My suggestion here is to 
+randomly visit a state with a distance of 2 or less to the current maximum. This should reduce redundancy.
+
+We could start with a 41 by 41 grid. For the agents' range, my suggestion is that we try ranges of 5, 10, and unlimited (in the latter 
+case, agents can move to any location in the landscape).
+Maybe we start with 200 timesteps? Here, too, we can experiment a little.
+Pöyhönen and Thoma also consider differently shaped landscapes. We should do the same.
+(They also both allow larger ranges, just like us.)
+
+Summary:
+Start with a 2D landscape, 41 by 41 grid, 200 timesteps.
+Agents' strategy as described above.
+The different kinds of setups to try are: different ranges (5, 10, unlimited), differently shaped landscapes (smoother vs. more rugged), 
+with or without epsilon-greedy, always moving to direct neighbor of current maximum vs. moving to a location one or two steps away from 
+a current maximum.

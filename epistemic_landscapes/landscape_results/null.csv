@@ -1,0 +1,1 @@
+network_structure,grid_size,sigma,num_agents,agent_range,agent_strategy,epsilon,num_timesteps,num_simulations,success_proportion,avg_time_to_peak,avg_max_visits,avg_visits,redundancy
